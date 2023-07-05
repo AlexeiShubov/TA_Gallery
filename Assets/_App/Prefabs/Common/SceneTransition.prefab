@@ -129,7 +129,9 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 32767
   m_TargetDisplay: 0
@@ -210,6 +212,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8185289162861222077}
     m_Modifications:
     - target: {fileID: 8394590004568544931, guid: f07a2c4f84dd468448fd4fe156b175c8, type: 3}
@@ -305,6 +308,9 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f07a2c4f84dd468448fd4fe156b175c8, type: 3}
 --- !u!114 &8548772582863727649 stripped
 MonoBehaviour:
@@ -327,6 +333,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8185289162861222077}
     m_Modifications:
     - target: {fileID: 812673249351788377, guid: fe5251623eb8f314a9eeb74b67009995, type: 3}
@@ -434,6 +441,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe5251623eb8f314a9eeb74b67009995, type: 3}
 --- !u!114 &2214543893599774538 stripped
 MonoBehaviour:

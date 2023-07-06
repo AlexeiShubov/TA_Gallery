@@ -1,6 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.Screen;
+
+public static class DefaultViewSceneSize
+{
+    public static Vector2 ScreenSize { get; set; }
+}
 
 [RequireComponent(typeof(GridLayoutGroup))]
 public class GridGenerator : MonoBehaviour
@@ -40,15 +46,24 @@ public class GridGenerator : MonoBehaviour
 
     private void SetCellSize()
     {
-        _gridLayoutGroup.cellSize = 
-            new Vector2(Screen.width / _gridLayoutGroup.constraintCount - _gridLayoutGroup.spacing.x, 
-            Screen.height / (_countImagesOnTheScreen / _gridLayoutGroup.constraintCount) - _gridLayoutGroup.spacing.y);
+        if(DefaultViewSceneSize.ScreenSize == default)
+        {
+            _gridLayoutGroup.cellSize =
+            new Vector2(width / _gridLayoutGroup.constraintCount - _gridLayoutGroup.spacing.x,
+                height / (_countImagesOnTheScreen / _gridLayoutGroup.constraintCount) - _gridLayoutGroup.spacing.y);
+
+            DefaultViewSceneSize.ScreenSize = _gridLayoutGroup.cellSize;
+        }
+        else
+        {
+            _gridLayoutGroup.cellSize = DefaultViewSceneSize.ScreenSize;
+        }
     }
-    
+
     private void GenerateNewCell(int imageNumber)
     {
         var newCell = _factory.Create().Init();
-        
+
         if (imageNumber <= _startLoadingCountImages)
         {
             newCell.SetImage(new ImageLoader(), imageNumber);
@@ -67,3 +82,4 @@ public class GridGenerator : MonoBehaviour
         }
     }
 }
+

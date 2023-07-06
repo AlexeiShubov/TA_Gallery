@@ -14,9 +14,11 @@ public class ViewManager : MonoBehaviour
     {
         _sceneTransition.Init();
         ButtonExtension.AddListener(_backButton, OnClickBackButton);
-        var data = SceneDataHolder.GetData<int>(SceneDataKeys.SelectedImageNumber);
-        data = data == default ? _DEFAULT_IMAGE : data;
-        new ImageLoader().LoadImage(_rawImage, data);
+        
+        var number = ServiceManager.Instance.GetService<TextureBaseDataHolder>().SelectTextureNumber;
+        
+        number = number == default ? _DEFAULT_IMAGE : number;
+        new ImageLoader().LoadImage(_rawImage, number);
     }
 
     private void OnDisable()

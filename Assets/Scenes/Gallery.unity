@@ -325,7 +325,6 @@ GameObject:
   - component: {fileID: 1696244012}
   - component: {fileID: 1696244011}
   - component: {fileID: 1696244010}
-  - component: {fileID: 1696244013}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -407,18 +406,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1696244013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1696244009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1728848960 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6827746964674705090, guid: cd7108d2e92a8384eaf069a9e9aa9bef, type: 3}
@@ -568,11 +555,30 @@ PrefabInstance:
       propertyPath: _cellsController
       value: 
       objectReference: {fileID: 1123410564}
+    - target: {fileID: 1447802204532306139, guid: 11c87335b498b9042a82b1c63d4b8736, type: 3}
+      propertyPath: _orientationController
+      value: 
+      objectReference: {fileID: 1447802205293945153}
+    - target: {fileID: 8369927857764518735, guid: 11c87335b498b9042a82b1c63d4b8736, type: 3}
+      propertyPath: ScreenOrientation
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11c87335b498b9042a82b1c63d4b8736, type: 3}
+--- !u!114 &1447802205293945153 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8369927857764518735, guid: 11c87335b498b9042a82b1c63d4b8736, type: 3}
+  m_PrefabInstance: {fileID: 1447802205293945152}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b334b446ca94f7448842de3758c0cf50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4944618740894179634 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2969437538774327838, guid: 172179db02de55745bb1f34e70e37039, type: 3}
@@ -613,6 +619,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1728848961}
     - target: {fileID: 6827746962891735571, guid: cd7108d2e92a8384eaf069a9e9aa9bef, type: 3}
+      propertyPath: m_Inertia
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827746962891735571, guid: cd7108d2e92a8384eaf069a9e9aa9bef, type: 3}
       propertyPath: m_Viewport
       value: 
       objectReference: {fileID: 827914196}
@@ -622,11 +632,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6827746962891735571, guid: cd7108d2e92a8384eaf069a9e9aa9bef, type: 3}
       propertyPath: m_Horizontal
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827746962891735571, guid: cd7108d2e92a8384eaf069a9e9aa9bef, type: 3}
+      propertyPath: m_MovementType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6827746962891735571, guid: cd7108d2e92a8384eaf069a9e9aa9bef, type: 3}
       propertyPath: m_DecelerationRate
-      value: 0.135
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6827746962891735571, guid: cd7108d2e92a8384eaf069a9e9aa9bef, type: 3}
       propertyPath: m_ScrollSensitivity
@@ -722,11 +736,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6827746964397353714, guid: cd7108d2e92a8384eaf069a9e9aa9bef, type: 3}
       propertyPath: m_UiScaleMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6827746964397353714, guid: cd7108d2e92a8384eaf069a9e9aa9bef, type: 3}
       propertyPath: m_ScreenMatchMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6827746964397353714, guid: cd7108d2e92a8384eaf069a9e9aa9bef, type: 3}
       propertyPath: m_MatchWidthOrHeight
@@ -746,7 +760,7 @@ PrefabInstance:
       objectReference: {fileID: 1696244011}
     - target: {fileID: 6827746964397353715, guid: cd7108d2e92a8384eaf069a9e9aa9bef, type: 3}
       propertyPath: m_RenderMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6827746964674705084, guid: cd7108d2e92a8384eaf069a9e9aa9bef, type: 3}
       propertyPath: m_SizeDelta.y
@@ -770,7 +784,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6827746964674705085, guid: cd7108d2e92a8384eaf069a9e9aa9bef, type: 3}
       propertyPath: m_Padding.m_Top
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6827746964674705085, guid: cd7108d2e92a8384eaf069a9e9aa9bef, type: 3}
       propertyPath: m_ChildAlignment
@@ -786,7 +800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6827746964674705085, guid: cd7108d2e92a8384eaf069a9e9aa9bef, type: 3}
       propertyPath: m_Padding.m_Bottom
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

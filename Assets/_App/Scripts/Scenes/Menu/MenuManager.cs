@@ -5,17 +5,17 @@ using UnityEngine.UI;
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] private Button _startButton;
-    [SerializeField] private SceneTransition sceneTransition;
+    [SerializeField] private SceneTransition _sceneTransition;
     
     public void Init()
     {
-        sceneTransition.Init();
+        _sceneTransition.Init();
         ButtonExtension.AddListener(_startButton, OnStartButtonClick);
     }
 
     private void OnStartButtonClick()
     {
-        sceneTransition.StartSwitchScene(SceneNames.Gallery.ToString());
+        _sceneTransition.StartSwitchScene(SceneNames.Gallery.ToString());
         TransformExtension.Deactivate(_startButton.transform);
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace MyLibs
 {
-    public class EventBus
+    public class EventBus : IService
     {
         private Dictionary<Type, List<object>> _signalsMap;
 

@@ -11,6 +11,7 @@ namespace MyLibs
             _serviceLocator = new ServiceLocator<IService>();
             
             _serviceLocator.ServiceRegister(CoroutineService.Instance);
+            _serviceLocator.ServiceRegister(new TextureBaseDataHolder());
         }
 
         public abstract T GetService<T>() where T : IService;

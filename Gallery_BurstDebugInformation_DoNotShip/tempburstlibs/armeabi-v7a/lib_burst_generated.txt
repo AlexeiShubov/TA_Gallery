@@ -1,4 +1,4 @@
-Library: D:\Unity\Gallery\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
+Library: C:\Users\alexe\Documents\GitHub\TA_Gallery\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
 --platform=Android
 --backend=burst-llvm-15
 --target=ARMV7A_NEON32
@@ -50,10 +50,10 @@ Library: D:\Unity\Gallery\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_g
 --assembly-defines=System;
 --assembly-defines=mscorlib;
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=D:\Unity\Gallery\Temp\Burst
+--temp-folder=C:\Users\alexe\Documents\GitHub\TA_Gallery\Temp\Burst
 --key-folder=C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/AndroidPlayer
---decode-folder=D:\Unity\Gallery\Library\Burst
---output=D:\Unity\Gallery\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
+--decode-folder=C:\Users\alexe\Documents\GitHub\TA_Gallery\Library\Burst
+--output=C:\Users\alexe\Documents\GitHub\TA_Gallery\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10

@@ -18,13 +18,14 @@ public class Cell : MonoBehaviour
     public Cell Init()
     {
         ButtonExtension.AddListener(_button, OnClickImage);
+        
         return this;
     }
 
     public void SetImage(ImageLoader imageLoader, int imageNumber)
     {
-        imageLoader.LoadImage(_rawImage, imageNumber);
         _imageNumber = imageNumber;
+        imageLoader.LoadImage(_rawImage, imageNumber);
     }
 
     private void OnClickImage()

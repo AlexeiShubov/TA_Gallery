@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class OrientationController : MonoBehaviour
@@ -15,7 +13,7 @@ public enum Orientation
 
     public Orientation ScreenOrientation;
 
-    private void Awake()
+    public void Init()
     {
         switch (ScreenOrientation)
         {
@@ -50,7 +48,5 @@ public enum Orientation
                 Screen.orientation = UnityEngine.ScreenOrientation.LandscapeLeft;
                 break;
         }
-
-        Destroy(this);
     }
 }

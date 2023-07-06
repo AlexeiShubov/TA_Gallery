@@ -20,7 +20,7 @@ public class GalleryManager : MonoBehaviour
     private void OnClickImage(Cell cell)
     {
         TransformExtension.Deactivate(_contentCanvas);
-        SceneDataHolder.SetData(SceneDataKeys.SelectedImageNumber, cell.ImageNumber);
+        ServiceManager.Instance.GetService<TextureBaseDataHolder>().SelectTextureNumber = cell.ImageNumber;
         sceneTransition.StartSwitchScene(SceneNames.View.ToString());
     }
 }

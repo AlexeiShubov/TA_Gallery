@@ -4,12 +4,15 @@ using UnityEngine.UI;
 
 public class SwipeHandler : IDisposable
 {
-    private const float _MIN_SCROLL_VALUE_FOR_LOAD_IMAGE = 0.25f;
+    private const float _MIN_SCROLL_VALUE_FOR_LOAD_IMAGE = 0.2f;
+    private const float _TOTAL_PROGRESS_PATH = 1f;
     private readonly ScrollRect _scrollRect;
 
     private float _currentProgressPath;
     private float _previousScrollValue;
 
+    public event Action OnMinimumDistanceTraveled;
+    
     public SwipeHandler(ScrollRect scrollRect)
     {
         _scrollRect = scrollRect;
@@ -17,11 +20,9 @@ public class SwipeHandler : IDisposable
         scrollRect.onValueChanged.AddListener(OnScrolling);
     }
 
-    public event Action OnMinimumDistanceTraveled;
-    
     private void SetScrollToTopPosition()
     {
-        _scrollRect.verticalNormalizedPosition = 1f;
+        _scrollRect.verticalNormalizedPosition = _TOTAL_PROGRESS_PATH;
     }
     
     private void OnScrolling(Vector2 scrollingValue)
@@ -46,7 +47,7 @@ public class SwipeHandler : IDisposable
 
     private float GetPercentDistance()
     {
-        _currentProgressPath = 1f - _previousScrollValue;
+        _currentProgressPath = _TOTAL_PROGRESS_PATH - _previousScrollValue;
 
         return _currentProgressPath / _MIN_SCROLL_VALUE_FOR_LOAD_IMAGE;
     }
